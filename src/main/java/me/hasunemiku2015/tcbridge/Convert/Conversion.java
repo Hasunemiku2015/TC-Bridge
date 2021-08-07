@@ -32,7 +32,10 @@ public class Conversion {
 
             if(!entity.getPassengers().isEmpty()){
                 if(entity.getPassengers().get(0) instanceof Player){
-                    Bukkit.getScheduler().runTaskLater(App.plugin,() -> CartProperties.setEditing((Player) entity.getPassengers().get(0),mem.getProperties()),1);
+                    Bukkit.getScheduler().runTaskLater(App.plugin,() -> {
+                        if(entity.getPassengers().size() > 0 && entity.getPassengers().get(0) instanceof Player) 
+                            CartProperties.setEditing((Player) entity.getPassengers().get(0),mem.getProperties());
+                    },1);
                 }
             }
             return mem;
