@@ -44,7 +44,6 @@ public class VanillaToTCSign implements Listener {
                         Vector Velocity = event.getVehicle().getVelocity();
 
                         MinecartMember mem = Conversion.ConvertToTrainCarts(event.getVehicle());
-                        System.out.println("hi");
 
                         TrainProperties prop = mem.getGroup().getProperties();
                         prop.setSpeedLimit(Maxspeed);
