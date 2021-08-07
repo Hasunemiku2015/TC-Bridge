@@ -1,0 +1,16 @@
+name: ${project.name}
+version: ${project.version}
+main: me.hasunemiku2015.tcbridge.App
+api-version: 1.13
+depend: [BKCommonLib,Train_Carts]
+load-after:
+commands:
+  place:
+    usage: /place <mode>
+    aliases: [handplace,hp]
+    description: Toggle the default cart type that a player will be placing.
+  convert:
+    usage: /convert <mode>
+    aliases: [conv]
+    description: Convert a cart from Vanilla to Train_Cart, vice versa.
+
