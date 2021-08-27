@@ -28,7 +28,7 @@ public class VanillaToTCSign implements Listener {
     }
 
     @EventHandler
-    @SuppressWarnings("rawtypes") 
+    @SuppressWarnings("rawtypes")
     public void onCartConvert(VehicleMoveEvent event) {
         if (!(event.getVehicle() instanceof Minecart)) return;
 
@@ -44,7 +44,6 @@ public class VanillaToTCSign implements Listener {
                         Vector Velocity = event.getVehicle().getVelocity();
 
                         MinecartMember mem = Conversion.ConvertToTrainCarts(event.getVehicle());
-
                         TrainProperties prop = mem.getGroup().getProperties();
                         prop.setSpeedLimit(Maxspeed);
                         mem.getGroup().setProperties(prop);
